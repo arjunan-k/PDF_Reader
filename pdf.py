@@ -5,7 +5,7 @@ from gtts import gTTS       # This module helps to convert the text to Audio (mp
 import os                   # This module helps to play the Audio in a player within the OS.
 import pygame               # This module helps to play the Audio in the console itself.
 
-########################################################################################
+# ------------------------------------------------------------------------------------ #
 
 # --------------------------------Reading the pdf file-------------------------------- #
 
@@ -22,7 +22,7 @@ for each in range(number_of_pages):              # Looping through each pages.
 
 pdfFileObj.close()                               # closing the pdf file object
 
-########################################################################################
+# ------------------------------------------------------------------------------------ #
 
 # --------------------------------Creating Audio from text---------------------------- #
 
@@ -33,7 +33,7 @@ myobj = gTTS(text=text, lang=language, slow=False)
 myobj.save("welcome.mp3")
 # Saving the converted audio in a mp3 file format.
 
-########################################################################################
+# ------------------------------------------------------------------------------------ #
 
 # --------------------------------Playing the music using 2 methods------------------- #
 
@@ -48,4 +48,4 @@ pygame.mixer.music.play(loops=0)            # Setting loops of play.
 while pygame.mixer.music.get_busy():        # Waiting for the music to play using while loop.
     pygame.time.Clock().tick(10)
 
-########################################################################################
+# ------------------------------------------------------------------------------------ #
